@@ -1,3 +1,97 @@
-.nav {
-    margin-left: 20em;
+body {
+    background-image: url("../pictures/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.calendar {
+    background-color: rgb(169, 202, 202);
+    width: 700px;
+    height: 500px;
+}
+
+.month-indice {
+    display: inline-block;
+}
+
+.week-indice div {
+    display: inline-flex;
+    margin-inline: 30px;
+
+}
+
+.day-indice button {
+    width: 90px;
+    height: 90px;
+    border: 0px;
+    display: inline-flex;
+}
+
+/* Login
+==============================================*/
+
+.ktitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    font-size: larger;
+    text-shadow: 2px 2px #7387df
+}
+
+#kpic {
+    width: 5vw;
+    height: 5vw;
+    transform: translate(-5%, 18%);
+}
+
+.login_sec {
+    float: left;
+}
+
+.login_form {
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.247);
+    box-shadow: 10px 10px 10px rgba(43, 40, 40, 0.473);
+    text-align: center;
+    width: 20em;
+    height: 18em;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.lcontent {
+    position: absolute;
+    transform: translate(18%, -4%);
+}
+
+.login_form a {
+    color: white;
+    text-decoration: none;
+}
+
+.login_form a:hover {
+    color: rgba(78, 14, 121, 0.589);
+    text-decoration: none;
+}
+
+#bentrar, #bcadastr {
+    width: 6em;
+}
+
+#ilogin, #isenha {
+    padding-top: auto;
+    text-align: justify;
+    width: 15em;
+}
+
+#ilogin input{
+    margin-left: 8px;
+}
+
+
+
+
