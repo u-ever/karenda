@@ -1,4 +1,10 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: block;
     background-image: url("../pictures/background.svg");
     background-size: cover;
     background-attachment: fixed;
@@ -35,20 +41,17 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     font-size: larger;
-    text-shadow: 2px 2px #7387df
+    text-shadow: 2px 2px #7387df;
+    text-align: center;
 }
 
 #kpic {
-    width: 5vw;
-    height: 5vw;
-    transform: translate(-5%, 18%);
+    width: 50px;
+    height: 50px;
+    transform: translate(1%, 13%);
 }
 
-.login_sec {
-    float: left;
-}
-
-.login_form {
+.login_div {
     font-weight: 900;
     color: white;
     position: absolute;
@@ -56,24 +59,30 @@ body {
     left: 50%;
     background-color: rgba(255, 255, 255, 0.247);
     box-shadow: 10px 10px 10px rgba(43, 40, 40, 0.473);
-    text-align: center;
+    text-align: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 40px;
     width: 20em;
     height: 18em;
     border-radius: 10px;
     transform: translate(-50%, -50%);
 }
 
-.lcontent {
-    position: absolute;
-    transform: translate(18%, -4%);
+#iemail, #isenha {
+    width: 95%;
 }
 
-.login_form a {
+.login_div_btnc {
+    text-align: center;
+}
+
+.login_div a {
     color: white;
     text-decoration: none;
 }
 
-.login_form a:hover {
+.login_div a:hover {
     color: rgba(78, 14, 121, 0.589);
     text-decoration: none;
 }
@@ -82,14 +91,74 @@ body {
     width: 6em;
 }
 
-#ilogin, #isenha {
-    padding-top: auto;
-    text-align: justify;
-    width: 15em;
+/* Cadastro
+==============================================*/
+
+.cadastro_div {
+    background-color: rgba(255, 255, 255, 0.247);
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 160px;
+    box-shadow: 10px 10px 10px rgba(43, 40, 40, 0.473);
+    text-align: left;
+    width: 20em;
+    height: 18em;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+
 }
 
-#ilogin input{
-    margin-left: 8px;
+#cnome, #cemail, #ccelular{
+    width: 95%;
+}
+
+.cadastro_div_btn { 
+    text-align: center;
+}
+
+.cadastro_div a {
+    color: white;
+    text-decoration: none;
+}
+
+.cadastro_div a:hover {
+    color: rgba(78, 14, 121, 0.589);
+    text-decoration: none;
+}
+
+
+/* Footer
+==============================================*/
+footer {
+    border-top: 1px solid rgb(55, 97, 100);
+    color: rgb(68, 97, 102);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5vw;
+}
+
+footer a {
+    text-decoration: none; 
+    color: rgba(54, 100, 92, 0.856);
+}
+
+footer a:hover {
+    text-decoration: none; 
+    color: rgba(78, 14, 121, 0.589);
 }
 
 
