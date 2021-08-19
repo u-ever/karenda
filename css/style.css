@@ -12,26 +12,35 @@ body {
 }
 
 .calendar {
-    background-color: rgb(169, 202, 202);
-    width: 700px;
-    height: 500px;
+    background-color: rgba(169, 202, 202, 0.466);
+    width: auto;
+    height: auto;
+    max-width: 700px;
+    position: relative;
+    padding: 2%;
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
 }
 
 .month-indice {
-    display: inline-block;
+    margin-bottom: 1%;
+    font-size: 30pt;
 }
 
 .week-indice div {
+    width: 12%;
     display: inline-flex;
-    margin-inline: 30px;
-
+    margin: 3px;
 }
 
 .day-indice button {
-    width: 90px;
-    height: 90px;
+    width: 12%;
+    height: 85px;
     border: 0px;
     display: inline-flex;
+    margin: 3px;
 }
 
 /* Login
@@ -139,7 +148,7 @@ footer {
     color: rgb(68, 97, 102);
     width: 100%;
     height: 100px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     text-align: right;
