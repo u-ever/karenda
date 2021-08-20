@@ -12,13 +12,13 @@
         <div class="ktitle">
             <h1>Karenda<img id="kpic" src="pictures/calendar.png"></h1>
         </div>
-        <p>email: <br><input id="iemail" type="text" placeholder="Digite seu email"></p>
-        <p>senha: <br><input id="isenha" type="text" placeholder="Digite sua senha"></p>
-        <div class="login_div_btnc">
+        <form method="get" action="#" class="form_login">
+            <p>email: <br><input id="iemail" type="email" placeholder="Digite seu email"></p>
+            <p>senha: <br><input id="isenha" type="password" placeholder="Digite sua senha"></p>
             <p><input type="checkbox" id="save-curuser"> guardar usuário?</p>
-            <p><input id="bentrar" type="button" value="Entrar"> <a href="cadastro.html"><input id="bcadastro" type="button" value="Cadastrar"></a></p>
-            <p><a href="#">Esqueceu a senha?</a></p>
-        </div>
+            <p><input id="bentrar" type="submit" value="Entrar"> <a href="cadastro.html"><input id="bcadastro" type="button" value="Cadastrar"></a></p>
+            <p><a id="forgot" href="#">Esqueceu a senha?</a></p>
+        </form>
     </div>
     <footer>
         <ul>

@@ -12,25 +12,25 @@
         <div class="ktitle">
             <h1>Cadastro<img id="kpic" src="pictures/calendar.png"></h1>
         </div>
-        <p>nome: <br><input id="cnome" type="text" placeholder="Digite seu nome"></p>
-        <p>email: <br><input id="cemail" type="email" placeholder="Digite seu email"></p>
-        <p>celular: <br><input id="ccelular" type="tel" placeholder="Digite seu celular"></p>
-        <p>
-            <label for="cempresa">empresa: <br></label>
-            <select name="cempresa" id="cempresa">
-                <option value="cunisa">Unisa</option>
-            </select>
-        </p>
-        <p>
-            <label for="cgrupo">grupo: <br></label>
-            <select name="cgrupo" id="cgrupo">
-                <option value="cmicrobiologia">Microbiologia</option>
-            </select>
-        </p>
-        <div class="cadastro_div_btn">
-            <p><input id="bsalvar" type="button" value="Salvar"> <a href="index.html"><input id="bcancelar" type="button" value="Cancelar"></a></p>
-            <p><a href="index.html">Já é cadastrado? Clique aqui</a></p>
-        </div>
+        <form class="form_cadastro" method="GET" action="#">
+            <p>nome: <br><input id="cnome" type="text" placeholder="Digite seu nome"></p>
+            <p>email: <br><input id="cemail" type="email" placeholder="Digite seu email"></p>
+            <p>celular: <br><input id="ccelular" type="tel" placeholder="Digite seu celular"></p>
+            <p>senha: <br><input id="csenha" type="password" placeholder="Digite uma senha"></p>       
+            <p><label for="cempresa">empresa:</label>
+                <label for="cgrupo">grupo:</label><br>
+                <select name="cempresa" id="cempresa">
+                    <option value="cunisa">Unisa</option>
+                </select>
+                <select name="cgrupo" id="cgrupo">
+                    <option value="cmicrobiologia">Microbiologia</option>
+                </select>
+            </p>
+            <div class="cadastro_div_btn"></div>
+                <p><input id="bsalvar" type="submit"  value="Salvar"> <a href="index.html"><input id="bcancelar" type="button" value="Cancelar"></a></p>
+                <p id="jacadst" ><a href="index.html">Já é cadastrado? Clique aqui</a></p>
+            </div>
+        </form>
     </div>
     <footer>
         <ul>
