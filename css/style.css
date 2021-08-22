@@ -146,6 +146,9 @@ footer a:hover {
     .ktitle, .ktitle_cadastro{
         background-image: none;
     }
+    .cadastro_div {
+        margin-top: 1vh;
+    }
     footer a {
         display: inline-flex;
         margin-bottom: 1px;
