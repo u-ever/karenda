@@ -5,39 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/pictures/calendar2.png" type="image/x-icon">
     <title>Karenda</title>
 </head>
 <body>
     <div class="cadastro_div">
-        <div class="ktitle">
-            <h1>Cadastro<img id="kpic" src="pictures/calendar.png"></h1>
-        </div>
+        <h1 class="ktitle_cadastro">Cadastro</h1>
         <form class="form_cadastro" method="GET" action="#">
-            <p>nome: <br><input id="cnome" type="text" placeholder="Digite seu nome"></p>
-            <p>email: <br><input id="cemail" type="email" placeholder="Digite seu email"></p>
-            <p>celular: <br><input id="ccelular" type="tel" placeholder="Digite seu celular"></p>
-            <p>senha: <br><input id="csenha" type="password" placeholder="Digite uma senha"></p>       
-            <p><label for="cempresa">empresa:</label>
-                <label for="cgrupo">grupo:</label><br>
-                <select name="cempresa" id="cempresa">
-                    <option value="cunisa">Unisa</option>
-                </select>
-                <select name="cgrupo" id="cgrupo">
-                    <option value="cmicrobiologia">Microbiologia</option>
-                </select>
-            </p>
-            <div class="cadastro_div_btn"></div>
-                <p><input id="bsalvar" type="submit"  value="Salvar"> <a href="index.html"><input id="bcancelar" type="button" value="Cancelar"></a></p>
-                <p id="jacadst" ><a href="index.html">Já é cadastrado? Clique aqui</a></p>
-            </div>
+            nome: <input id="cnome" type="text" placeholder="Digite seu nome">
+            email: <input id="cemail" type="email" placeholder="Digite seu email">
+            celular: <input id="ccelular" type="tel" placeholder="Digite seu celular">
+            senha: <input id="csenha" type="password" placeholder="Digite uma senha">       
+            <label for="cempresa">empresa:</label>
+            <select name="cempresa" id="cempresa">
+                <option value="cunisa">Unisa</option>
+            </select>
+            <label for="cgrupo">grupo:</label>
+            <select name="cgrupo" id="cgrupo">
+                <option value="cmicrobiologia">Microbiologia</option>
+            </select>
+            <input id="bsalvar" type="submit" value="Salvar"> 
+            <a href="index.html"><input id="bcancelar" type="button" value="Cancelar"></a>
         </form>
     </div>
     <footer>
-        <ul>
-            <li><a href="#">Contato</a></li>
-            <li><a href="https://www.linkedin.com/in/uever/">Linkedin</a></li>
-            <li><a href="https://github.com/u-ever">Github</a></li>      
-        </ul>
+        <a href="#">Contato</a>
+        <a href="https://www.linkedin.com/in/uever/">Linkedin</a>
+        <a href="https://github.com/u-ever">Github</a>      
     </footer>
 </body>
 </html>
