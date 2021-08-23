@@ -130,7 +130,6 @@ header {
 .calendar {
     background-color:var(--div-bg-color);
     box-shadow: 10px 10px 15px var(--div-bg-shadow);
-    width: auto;
     height: auto;
     max-width: 700px;
     position: relative;
@@ -170,7 +169,7 @@ header {
 .day-indice button:hover {
     box-shadow: 10px 10px 15px var(--div-bg-shadow-hover);
     background-color: var(--btn-bg-hover-color);
-    color: var(--a-hover-color);
+    color: var(--body-color);
 }
 
 
@@ -203,11 +202,31 @@ footer a:hover {
         box-shadow: none;
     }
     .cadastro_div {
-        margin-top: 1vh;
+        margin-top: 5vh;
     }
     footer a {
         display: inline-flex;
         margin-bottom: 1px;
         padding: 1px;
+    }
+    /*calendar*/
+    .calendar {
+        max-width: 300px;
+        margin-top: 5vh;
+    }
+    
+    .month-indice {
+        font-size: 30px;
+    }
+    
+    .week-indice div {
+        width: 35px;
+        margin: 1px;
+    }
+    
+    .day-indice button {
+        width: 35px;
+        height: 35px;
+        margin: 1px;
     }
 } 
