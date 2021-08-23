@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,36 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Karenda</title>
 </head>
+
 <body>
+    <header>
+        <label for="switch" id="switch">
+            <input type="checkbox" id="switch"> Dark Mode
+        </label>
+    </header>
     <div class="calendar">
         <div class="month-indice">
             <time datetime="2021-08">Agosto 2021</time>
         </div>
-            <div class="week-indice">
-                <div>Dom</div>    
-                <div>Seg</div>
-                <div>Ter</div>
-                <div>Qua</div>
-                <div>Qui</div>
-                <div>Sex</div>
-                <div>Sab</div>
-            </div>
-            <div class="day-indice">
-            </div>
-    </div> 
-    <script src="js/script.js">
-
-    </script>
+        <div class="week-indice">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="day-indice" onload="calendar()">
+        </div>
+    </div>
+    <footer>
+        <a href="#">Contato</a>
+        <a href="https://www.linkedin.com/in/uever/">Linkedin</a>
+        <a href="https://github.com/u-ever">Github</a>      
+    </footer>
+    <script src="js/darkmode.js"></script>
+    <script src="js/calendar.js"></script>
 </body>
+
 </html>
