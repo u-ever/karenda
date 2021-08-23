@@ -54,7 +54,7 @@ header {
     letter-spacing: 4px;
     text-shadow: 2px 2px var(--title-shadow-color);
     text-align: center;
-    background-image: url(/pictures/calendar2.png);
+    background-image: url(/assets/calendar2.png);
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: calc(100% - 20%);
@@ -120,9 +120,12 @@ header {
 }
 
 #switch {
+    width: 30px;
+    height: 30px;
     float: right;
     color: var(--checkbox-color);
     filter: var(--a-icon-color-mode);
+    background-image: url(/assets/daynight1.png);
 }
 /* Calendar
 ==============================================*/
