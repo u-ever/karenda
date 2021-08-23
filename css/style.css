@@ -8,6 +8,8 @@
     --btn-text-color: #FFFFFF;
     --btn-bg-hover-color: #cadada;
     --a-hover-color: rgba(32, 96, 170, 0.589);
+    --checkbox-color: #61C0BF;
+    --a-icon-color-mode: grayscale(0);
 }
 
 .dark-mode {
@@ -21,6 +23,8 @@
     --btn-bg-hover-color: #cfcada;
     --btn-hover-color: #2b2031;
     --a-hover-color: #cfcada;
+    --checkbox-color: #cfcada;
+    --a-icon-color-mode: grayscale(1);
 }
 
 html {
@@ -36,8 +40,14 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+header {
+    border: 1px solid transparent;
+}
+
 /* Login / Cadastro
 ==============================================*/
+
+
 
 .ktitle, .ktitle_cadastro{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -71,9 +81,10 @@ body {
 .login_div *, .cadastro_div * {
     margin-bottom: 20px;
     border: none;
+    border-radius: 5px;
 }
 
-#iemail, #isenha, #cnome, #cemail, #ccelular, #csenha, #cempresa, #cgrupo  {
+#iemail, #isenha, #cnome, #cemail, #ccelular, #csenha, #cempresa, #cgrupo {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -108,6 +119,11 @@ body {
     color: var(--btn-hover-color);
 }
 
+#switch {
+    float: right;
+    color: var(--checkbox-color);
+    filter: var(--a-icon-color-mode);
+}
 /* Calendar
 ==============================================*/
 
