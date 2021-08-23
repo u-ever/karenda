@@ -1,19 +1,18 @@
 :root {
-    --body-bg-color: linear-gradient(#FFB6B9,#FAE3D9, white);
-    --body-color: #61C0BF;
+    --body-bg-color: linear-gradient(#4BB2F2,#FAE3D9, white);
+    --body-color: #024059;
     --div-bg-color: #fae3d983;
     --title-shadow-color: #BBDED6;
     --div-bg-shadow: rgba(43, 40, 40, 0.473);
     --div-bg-shadow-hover: rgba(177, 167, 167, 0.473);
     --btn-text-color: #FFFFFF;
-    --btn-bg-hover-color: #cadada;
+    --btn-bg-hover-color: #FFFFFF;
     --a-hover-color: rgba(32, 96, 170, 0.589);
-    --checkbox-color: #61C0BF;
-    --a-icon-color-mode: grayscale(0);
+    --ck-darkmode-color: #024059;
 }
 
 .dark-mode {
-    --body-bg-color: linear-gradient(#261C2C,#3E2C41, #5C527F);
+    --body-bg-color: linear-gradient(#261C2C,#67526b, #70678f);
     --body-color: #2b2031;
     --div-bg-color: #fae3d983;
     --title-shadow-color: #cfcada;
@@ -23,8 +22,7 @@
     --btn-bg-hover-color: #cfcada;
     --btn-hover-color: #2b2031;
     --a-hover-color: #cfcada;
-    --checkbox-color: #cfcada;
-    --a-icon-color-mode: grayscale(1);
+    --ck-darkmode-color: #cfcada;
 }
 
 html {
@@ -44,6 +42,7 @@ header {
     border: 1px solid transparent;
 }
 
+
 /* Login / Cadastro
 ==============================================*/
 
@@ -53,11 +52,15 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 4px;
     text-shadow: 2px 2px var(--title-shadow-color);
-    text-align: center;
+    text-align: center;/*
     background-image: url(/assets/calendar2.png);
     background-size: 40px;
     background-repeat: no-repeat;
-    background-position: calc(100% - 20%);
+    background-position: calc(100% - 20%);*/
+}
+
+h1::after{
+    content: '\1F4C6';
 }
 
 .ktitle_cadastro{
@@ -119,9 +122,9 @@ header {
     color: var(--btn-hover-color);
 }
 
-#switch {
+#switch, #lswitch {
     float: right;
-    filter: var(--a-icon-color-mode);
+    color: var(--ck-darkmode-color);
 }
 /* Calendar
 ==============================================*/
@@ -167,8 +170,8 @@ header {
 
 .day-indice button:hover {
     box-shadow: 10px 10px 15px var(--div-bg-shadow-hover);
-    background-color: var(--btn-bg-hover-color);
-    color: var(--body-color);
+    background-color: var(--div-bg-shadow-hover);
+    color: var(--btn-text-color);
 }
 
 
