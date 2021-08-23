@@ -119,12 +119,13 @@ header {
     color: var(--btn-hover-color);
 }
 
-#switch:after {
-    content: '\1F313';
-    color: #8a9797;
+#switch {
     width: 30px;
     height: 30px;
     float: right;
+    color: var(--checkbox-color);
+    filter: var(--a-icon-color-mode);
+    background-image: url(/assets/daynight1.png);
 }
 /* Calendar
 ==============================================*/
