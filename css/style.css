@@ -155,7 +155,8 @@ h1::after{
     color: var(--body-color);
 }
 
-.day-indice button {
+.day-indice div {
+    padding: 1px;
     width: 85px;
     height: 85px;
     border: 0px;
@@ -168,7 +169,7 @@ h1::after{
     border-radius: 5px;
 }
 
-.day-indice button:hover {
+.day-indice div:hover {
     box-shadow: 10px 10px 15px var(--div-bg-shadow-hover);
     background-color: var(--div-bg-shadow-hover);
     color: var(--btn-text-color);
@@ -226,7 +227,7 @@ footer a:hover {
         margin: 1px;
     }
     
-    .day-indice button {
+    .day-indice div {
         width: 35px;
         height: 35px;
         margin: 1px;
