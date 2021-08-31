@@ -1,15 +1,35 @@
 //calendar-----------------------------------------------
+var defDate = new Date();
+var today = defDate.getDate();
+var month = defDate.getMonth();
+var year = defDate.getFullYear();
+const divDays = document.querySelector(".day-indice");
+const elmonth = document.querySelector("#cmonth")
+const elyear = document.querySelector("#cyear")
+
+function nameOfMonth(){
+   let actualMonth = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Oututro", "Novembro", "Dezembro"]
+   elmonth.innerText = actualMonth[month]
+}
+
+function setCurrentYear() {
+   elyear.innerText = year
+}
 
 function calendar() {
-    const days = document.querySelector(".day-indice");
- 
-    for (let day = 1; day <= 35; day++) {
-       if (day <= 31) {
-        days.innerHTML += ` <div onclick="prompt('Digite o título do evento')"><time datetime="2021-08-${day}">${day}</time></div> `
-       } else {
-        days.innerHTML += `<div style = "background-color: gray; color: white"><time datetime="2021-08-${day - 31}">${day - 31}</time></div> `
-       }
-    }
- }
- 
- window.onload = calendar()
+
+   for (var day = 1; day <= 35; day++) {
+      if (day <= 31) {
+         divDays.innerHTML += ` <div id="day${day}"><time datetime="2021-08-${day}">${day}</time></div> `
+      } else {
+         divDays.innerHTML += ` <div style = "background-color: gray; color: white"><time datetime="2021-08-${day - 31}">${day - 31}</time></div> `
+      }
+   }
+   var dtoday = document.getElementById("day" + today)
+   dtoday.style.backgroundColor = "cornflowerblue"
+   dtoday.style.color = "white"
+}
+
+window.onload = calendar()
+window.onload = nameOfMonth()
+window.onload = setCurrentYear()
