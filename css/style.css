@@ -122,7 +122,7 @@ h1::after{
     color: var(--btn-hover-color);
 }
 
-#switch-light, #switch-dark {
+#switch-dark {
     float: right;
     color: var(--ck-darkmode-color);
     border: none;
