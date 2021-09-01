@@ -122,9 +122,12 @@ h1::after{
     color: var(--btn-hover-color);
 }
 
-#switch, #lswitch {
+#switch-light, #switch-dark {
     float: right;
     color: var(--ck-darkmode-color);
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
 }
 /* Calendar
 ==============================================*/

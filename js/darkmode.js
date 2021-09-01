@@ -1,11 +1,18 @@
 //dark-mode-----------------------------------------------
 const html = document.querySelector('html')
-const checkbox = document.querySelector('#switch')
+const btntheme = document.querySelector('#switch-dark')
+const btntheme = document.querySelector('#switch-light')
 
-checkbox.addEventListener('click', function() {
+btntheme.addEventListener('click', function() {
 	html.classList.toggle('dark-mode')
+	localStorage.setItem("theme", "dark-mode")
+	
 })
 
+
+let theme = localStorage.getItem("theme")
+html.classList.toggle(theme)
+console.log(theme)
 
 
 // necessário salvar no Local Storage 
