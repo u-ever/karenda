@@ -4,8 +4,8 @@ var today = defDate.getDate();
 var month = defDate.getMonth();
 var year = defDate.getFullYear();
 const divDays = document.querySelector(".day-indice");
-const elmonth = document.querySelector("#cmonth")
-const elyear = document.querySelector("#cyear")
+const elmonth = document.querySelector("#current_month")
+const elyear = document.querySelector("#current_year")
 
 function nameOfMonth(){
    let actualMonth = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Oututro", "Novembro", "Dezembro"]
