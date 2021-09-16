@@ -1,14 +1,16 @@
 //calendar-----------------------------------------------
 var defDate = new Date();
+var actualMonth = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Oututro", "Novembro", "Dezembro"]
 var today = defDate.getDate();
 var month = defDate.getMonth();
 var year = defDate.getFullYear();
+var prev_month = document.querySelector("#prev_month")
+var next_month = document.querySelector("#next_month")
 const divDays = document.querySelector(".day-indice");
 const elmonth = document.querySelector("#current_month")
 const elyear = document.querySelector("#current_year")
 
-function nameOfMonth(){
-   let actualMonth = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Oututro", "Novembro", "Dezembro"]
+function nameOfMonth() {
    elmonth.innerText = actualMonth[month]
 }
 
@@ -30,6 +32,47 @@ function calendar() {
    dtoday.style.color = "white"
 }
 
+function monthArrows(){
+   let stay_CMonth = month
+   let stay_CYear = year
+
+prev_month.addEventListener("click", function () {
+
+   if (stay_CMonth > 0) {
+      stay_CMonth -= 1
+      elmonth.innerText = actualMonth[stay_CMonth]
+      console.log(stay_CMonth)
+   } else {
+      stay_CMonth = 11
+      stay_CYear -= 1
+      elmonth.innerText = actualMonth[stay_CMonth]
+      elyear.innerText = stay_CYear
+   }
+
+})
+
+next_month.addEventListener("click", function () {
+
+   if (stay_CMonth < 11) {
+      stay_CMonth += 1
+      elmonth.innerText = actualMonth[stay_CMonth]
+      console.log(stay_CMonth)
+   } else {
+      stay_CMonth = 0
+      stay_CYear += 1
+      elmonth.innerText = actualMonth[stay_CMonth]
+      elyear.innerText = stay_CYear
+   }
+
+})
+
+}
+
 window.onload = calendar()
 window.onload = nameOfMonth()
 window.onload = setCurrentYear()
+window.onload = monthArrows()
+
+
+
+
