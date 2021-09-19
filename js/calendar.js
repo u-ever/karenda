@@ -1,4 +1,4 @@
-//calendar-----------------------------------------------
+//calendar global variables-----------------------------------------------
 var defDate = new Date();
 var actualMonth = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Oututro", "Novembro", "Dezembro"]
 var today = defDate.getDate();
@@ -10,14 +10,17 @@ const divDays = document.querySelector(".day-indice");
 const elmonth = document.querySelector("#current_month")
 const elyear = document.querySelector("#current_year")
 
+//name of month
 function nameOfMonth() {
    elmonth.innerText = actualMonth[month]
 }
 
+//Current Year
 function setCurrentYear() {
    elyear.innerText = year
 }
 
+//Calendar Grid
 function calendar() {
 
    for (var day = 1; day <= 35; day++) {
@@ -32,42 +35,42 @@ function calendar() {
    dtoday.style.color = "white"
 }
 
+// Arrows for month and year change
 function monthArrows(){
    let stay_CMonth = month
    let stay_CYear = year
 
-prev_month.addEventListener("click", function () {
+   prev_month.addEventListener("click", function () {
 
-   if (stay_CMonth > 0) {
-      stay_CMonth -= 1
-      elmonth.innerText = actualMonth[stay_CMonth]
-      console.log(stay_CMonth)
-   } else {
-      stay_CMonth = 11
-      stay_CYear -= 1
-      elmonth.innerText = actualMonth[stay_CMonth]
-      elyear.innerText = stay_CYear
-   }
-
+      if (stay_CMonth > 0) {
+         stay_CMonth -= 1
+         elmonth.innerText = actualMonth[stay_CMonth]
+         console.log(stay_CMonth)
+      } else {
+         stay_CMonth = 11
+         stay_CYear -= 1
+         elmonth.innerText = actualMonth[stay_CMonth]
+         elyear.innerText = stay_CYear
+      }
 })
 
-next_month.addEventListener("click", function () {
+   next_month.addEventListener("click", function () {
 
-   if (stay_CMonth < 11) {
-      stay_CMonth += 1
-      elmonth.innerText = actualMonth[stay_CMonth]
-      console.log(stay_CMonth)
-   } else {
-      stay_CMonth = 0
-      stay_CYear += 1
-      elmonth.innerText = actualMonth[stay_CMonth]
-      elyear.innerText = stay_CYear
-   }
-
+      if (stay_CMonth < 11) {
+         stay_CMonth += 1
+         elmonth.innerText = actualMonth[stay_CMonth]
+         console.log(stay_CMonth)
+      } else {
+         stay_CMonth = 0
+         stay_CYear += 1
+         elmonth.innerText = actualMonth[stay_CMonth]
+         elyear.innerText = stay_CYear
+      }
 })
 
 }
 
+// Functions Calls
 window.onload = calendar()
 window.onload = nameOfMonth()
 window.onload = setCurrentYear()

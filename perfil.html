@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/pictures/calendar2.png" type="image/x-icon">
+    <title>Karenda</title>
+</head>
+<body>
+    <header>       
+        <input id="switch-dark" type= "button" value="tema &#127763">
+    </header>
+
+
+    <div class="perfil_div">
+        <h1 class="perfil_name">Perfil</h1>
+
+        <form class="form_perfil" method="GET" action="#">
+            nome: <input id="pnome" type="text" placeholder="nome">
+            email: <input id="pemail" type="email" placeholder="email">
+            celular: <input id="pcelular" type="tel" placeholder="celular">
+            senha: <input id="psenha" type="password" placeholder="senha">       
+            <label for="pgrupo">grupo:</label>
+            <select name="pgrupo" id="pgrupo">
+                <option value="pmicrobiologia">Microbiologia</option>
+            </select>
+            <input id="bsalvar_perfil" type="submit" value="Salvar"> 
+            <a href="main.html"><input id="bvoltar_perfil" type="button" value="Voltar"></a>
+        </form>
+
+    </div>
+
+    <footer>
+        <a href="#">Contato</a>
+        <a href="https://www.linkedin.com/in/uever/">Linkedin</a>
+        <a href="https://github.com/u-ever">Github</a>      
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+
+</body>
+</html>

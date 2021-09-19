@@ -1,6 +1,7 @@
 :root {
     --body-bg-color: linear-gradient(#4BB2F2,#FAE3D9, white);
     --body-color: #024059;
+    --header-color: #FFFFFF;
     --div-bg-color: #fae3d983;
     --title-shadow-color: #BBDED6;
     --div-bg-shadow: rgba(43, 40, 40, 0.473);
@@ -8,12 +9,12 @@
     --btn-text-color: #FFFFFF;
     --btn-bg-hover-color: #FFFFFF;
     --a-hover-color: rgba(32, 96, 170, 0.589);
-    --ck-darkmode-color: #024059;
 }
 
 .dark-mode {
     --body-bg-color: linear-gradient(#261C2C,#67526b, #70678f);
-    --body-color: #2b2031;
+    --body-color: #211925;
+    --header-color: #cfcada;
     --div-bg-color: #fae3d983;
     --title-shadow-color: #cfcada;
     --div-bg-shadow: rgba(43, 40, 40, 0.473);
@@ -22,7 +23,6 @@
     --btn-bg-hover-color: #cfcada;
     --btn-hover-color: #2b2031;
     --a-hover-color: #cfcada;
-    --ck-darkmode-color: #cfcada;
 }
 
 html {
@@ -42,11 +42,33 @@ header {
     border: 1px solid transparent;
 }
 
+/*header
+==============================================*/
+header a {
+    text-decoration: none; 
+    color: var(--header-color);
+    margin: 10px;
+}
+
+header a:hover {
+    text-decoration: none; 
+    color: var(--a-hover-color);
+}
+
+#switch-dark {
+    float: right;
+    color: var(--header-color);
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    width: 6%;
+}
 
 /* Login / Cadastro
 ==============================================*/
 
-.ktitle, .ktitle_cadastro{
+.ktitle, .ktitle_cadastro, .perfil_name {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 4px;
     text-shadow: 2px 2px var(--title-shadow-color);
@@ -58,14 +80,14 @@ header {
 }
 
 h1::after{
-    content: '\1F4C6';
+    content: '\1F4C5';
 }
 
-.ktitle_cadastro{
+.ktitle_cadastro {
     background-position: calc(100% - 18%);
 }
 
-.login_div, .cadastro_div {
+.login_div, .cadastro_div, .perfil_div {
     font-weight: 900;
     color: var(--body-color);
     background-color: var(--div-bg-color);
@@ -79,13 +101,13 @@ h1::after{
     overflow: hidden;
 }
 
-.login_div *, .cadastro_div * {
+.login_div *, .cadastro_div *, .perfil_div * {
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
 }
 
-#iemail, #isenha, #cnome, #cemail, #ccelular, #csenha, #cempresa, #cgrupo {
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -100,7 +122,7 @@ h1::after{
     color: var(--a-hover-color);
 }
 
-#bentrar, #bcadastro, #bsalvar, #bcancelar {
+input[type=button], input[type=submit] {
     color: var(--btn-text-color);
     font-weight: bold;
     background-color: var(--body-color);
@@ -109,9 +131,6 @@ h1::after{
     float: left;
     padding: 10px;
     margin-left: 25px;
-}
-
-#bsalvar, #bcancelar {
     margin-top: 10px;
 }
 
@@ -120,13 +139,6 @@ h1::after{
     color: var(--btn-hover-color);
 }
 
-#switch-dark {
-    float: right;
-    color: var(--ck-darkmode-color);
-    border: none;
-    background-color: transparent;
-    font-weight: 600;
-}
 /* Calendar
 ==============================================*/
 
@@ -146,7 +158,7 @@ h1::after{
 #prev_month, #next_month {
     color: var(--body-color);
     cursor: pointer;
-    line-height: 0.4em;
+    line-height: 0.6em;
     font-size: 2em;
     user-select: none;
 }
@@ -158,7 +170,6 @@ h1::after{
 #prev_month {
     float: left;
 }
-
 
 .month-indice {
     margin-bottom: 1%;
@@ -220,14 +231,25 @@ footer a:hover {
 ==============================================*/
 
 @media only screen and (max-width: 640px) {
-    .ktitle, .ktitle_cadastro{
-        background-image: none;
+    /* header */
+    #switch-dark {
+        float: right;
+        color: var(--header-color);
+        border: none;
+        background-color: transparent;
+        padding: 0px;
+        margin: 0px;
+        width: 20%;
     }
-    .login_div, .cadastro_div {
+    .ktitle, .ktitle_cadastro, .perfil_name{
+        background-image: none;
+        margin-top: 2vh;
+    }
+    .login_div, .cadastro_div, .perfil_div {
         box-shadow: none;
     }
-    .cadastro_div {
-        margin-top: 5vh;
+    .cadastro_div, .perfil_div {
+        margin-top: 4vh;
     }
     footer a {
         display: inline-flex;
@@ -246,7 +268,7 @@ footer a:hover {
 
     #prev_month, #next_month {
         font-size: 1.8em;
-        margin-top: 0.1em;
+        margin-top: 0em;
     }
     
     .week-indice div {
